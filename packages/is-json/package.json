@@ -1,8 +1,9 @@
 {
-  "name": "toa-is-json",
+  "name": "@toa/is-json",
   "version": "0.0.1",
   "description": "like koa-is-json",
-  "main": "src/index.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "author": "Joey Xie",
   "license": "MIT",
   "scripts": {

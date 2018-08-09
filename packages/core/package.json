@@ -1,0 +1,12 @@
+{
+  "name": "@toa/core",
+  "version": "0.0.1",
+  "description": "core library for toa",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "author": "Joey Xie",
+  "license": "MIT",
+  "scripts": {
+    "prepare": "tsc -p tsconfig.json"
+  }
+}

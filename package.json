@@ -10,5 +10,9 @@
   },
   "devDependencies": {
     "lerna": "^3.0.0-rc.0"
-  }
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "private": true
 }
