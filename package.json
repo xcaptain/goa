@@ -4,5 +4,11 @@
   "description": "a framework like koa but in typescript",
   "main": "src/index.ts",
   "author": "Joey Xie",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "prepare": "lerna run prepare"
+  },
+  "devDependencies": {
+    "lerna": "^3.0.0-rc.0"
+  }
 }

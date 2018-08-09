@@ -1,0 +1,11 @@
+{
+  "name": "toa-is-json",
+  "version": "0.0.1",
+  "description": "like koa-is-json",
+  "main": "src/index.ts",
+  "author": "Joey Xie",
+  "license": "MIT",
+  "scripts": {
+    "prepare": "tsc -p tsconfig.json"
+  }
+}
