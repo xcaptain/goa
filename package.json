@@ -1,0 +1,8 @@
+{
+  "name": "toa",
+  "version": "0.0.1",
+  "description": "a framework like koa but in typescript",
+  "main": "index.js",
+  "author": "Joey Xie",
+  "license": "MIT"
+}
