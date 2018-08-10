@@ -1,4 +1,5 @@
 import * as http from 'http';
+import * as url from 'url';
 
 export class Mux {
   public routes: IRoute[];
@@ -22,11 +23,11 @@ export class Mux {
   }
 
   public serve(req: http.IncomingMessage, resp: http.ServerResponse): void {
-    const path = req.url;
+    const urlString = req.url === undefined ? '' : req.url;
+    const parsedUrl = url.parse(urlString, true);
     let isMatched = false;
     this.routes.forEach(route => {
-      // console.log('path', path, 'route path', route.path);
-      if (route.path === path) {
+      if (route.path === parsedUrl.pathname) {
         isMatched = true;
         return route.handler(req, resp);
       }
@@ -34,8 +35,6 @@ export class Mux {
     if (isMatched === false) {
       this.handleNotFound(req, resp);
     }
-    // const handler = this.routes[0].handler;
-    // return handler(req, resp);
   }
 }
 
