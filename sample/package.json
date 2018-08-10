@@ -1,7 +1,7 @@
 {
-  "name": "toa-sample",
+  "name": "goa-sample",
   "version": "0.0.1",
-  "description": "toa sample project",
+  "description": "goa sample project",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "author": "Joey Xie",

@@ -1,5 +1,5 @@
 {
-  "name": "@toa/is-json",
+  "name": "@goa/is-json",
   "version": "0.0.1",
   "description": "like koa-is-json",
   "main": "lib/index.js",

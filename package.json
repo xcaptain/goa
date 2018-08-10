@@ -1,5 +1,5 @@
 {
-  "name": "toa",
+  "name": "goa",
   "version": "0.0.1",
   "description": "a framework like koa but in typescript",
   "main": "src/index.ts",
