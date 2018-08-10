@@ -1,0 +1,18 @@
+{
+  "name": "toa-sample",
+  "version": "0.0.1",
+  "description": "toa sample project",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "author": "Joey Xie",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node src/index.ts"
+  },
+  "devDependencies": {
+    "ts-node": "^7.0.0"
+  },
+  "dependencies": {
+    "typescript": "^3.0.1"
+  }
+}
