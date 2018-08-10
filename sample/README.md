@@ -2,7 +2,8 @@
 
 ## how to run
 
-1. `yarn link '@goa/core'`
+1. `yarn link @goa/core`
 2. `yarn install`
 3. `yarn start`
 4. `curl -i 'http://localhost:8000'`
+5. `curl -i 'http://localhost:8000/cats'`
