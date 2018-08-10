@@ -3,3 +3,4 @@ export function __version__(): string {
 }
 
 export * from './application';
+export * from './mux';
