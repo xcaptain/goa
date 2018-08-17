@@ -1,6 +1,6 @@
 {
   "name": "@goa/core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "core library for goa",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -16,5 +16,6 @@
   },
   "devDependencies": {
     "@types/node": "^10.5.7"
-  }
+  },
+  "gitHead": "30f569f6ce6dd1d2ee61817f18d74ebbb3e4e9b3"
 }
