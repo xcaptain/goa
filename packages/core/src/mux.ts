@@ -1,19 +1,17 @@
 import * as http from 'http';
-import * as url from 'url';
-
+import { Route } from './route';
+import { handlerFunc } from './types';
 export class Mux {
-  public routes: IRoute[];
+  public routes: Route[];
 
   public constructor() {
     this.routes = [];
   }
 
   public handleFunc(path: string, callback: handlerFunc) {
-    const r: IRoute = {
-      handler: callback,
-      path,
-    };
-    this.routes.push(r);
+    const route = new Route(path, callback);
+    this.routes.push(route);
+    return route;
   }
 
   public handleNotFound(_: http.IncomingMessage, resp: http.ServerResponse): void {
@@ -23,11 +21,9 @@ export class Mux {
   }
 
   public serve(req: http.IncomingMessage, resp: http.ServerResponse): void {
-    const urlString = req.url === undefined ? '' : req.url;
-    const parsedUrl = url.parse(urlString, true);
     let isMatched = false;
     this.routes.forEach(route => {
-      if (route.path === parsedUrl.pathname) {
+      if (route.match(req)) {
         isMatched = true;
         return route.handler(req, resp);
       }
@@ -36,11 +32,4 @@ export class Mux {
       this.handleNotFound(req, resp);
     }
   }
-}
-
-type handlerFunc = (req: http.IncomingMessage, resp: http.ServerResponse) => void;
-
-interface IRoute {
-  path: string;
-  handler: handlerFunc;
 }
