@@ -25,7 +25,7 @@ export class Mux {
     this.routes.forEach(route => {
       if (route.match(req)) {
         isMatched = true;
-        return route.handler(req, resp);
+        route.handler(req, resp);
       }
     });
     if (isMatched === false) {
